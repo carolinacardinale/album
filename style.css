@@ -1,0 +1,46 @@
+*{ /*seleciona todos os elementos HTML*/
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #eee;
+}
+header{
+    height: 150px;
+    display: flex;
+    justify-content: center; /*justify-conten: define o alinhamento dos itens no eixo principal*/
+    align-items: center;
+}
+
+header h1{
+ font-family: candara;
+ text-align: center;
+ margin-top: 3%;
+}
+.gallery-container{
+    display: flex;
+    flex-wrap: wrap;/*coloca os itens alinhados umdo lado do outro*/
+    justify-content: space-evenly; /*space-evenly: espaçamento entre dois intens seja igual*/
+    gap: 1vw; /*define lacunas - como se criasse uma tabela*/
+    padding: 0 1vw; /* vw: largura e altura quando temos meta viewport*/
+}
+.gallery-items{
+    width: 340px;
+    height: 340px;
+    object-fit: cover; /*object-fit: redimensionar para caber / cover: mantém a proporção e preenche toda a div*/
+    border: 10px solid red;
+    box-shadow: 5px 5px 5px #0009;
+    filter: grayscale(100%); /*filtro em escala de cinza aplicado na imagem*/
+    transition: transform 1s linear;
+}
+.gallery-items img{
+    width: 100%;
+    height: 100%;
+    
+}
+.gallery-items:hover{
+    transform: scale(1.5);/*efeito de aumentar e diminuir a figurinha*/
+    filter: none; /*tira o filtro em escala de cinza e mostra a cor da imagem*/
+    
+}
